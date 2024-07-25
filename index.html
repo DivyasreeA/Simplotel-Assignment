@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Navbar menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="navbar-toggle"><i class="fas fa-bars"></i></label>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#restaurant">Restaurant</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <!-- Navbar icons -->
+            <div class="navbar-icons">
+                <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+                <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Background image and text overlay -->
+    <div class="background-image">
+        <div class="text-overlay">
+            <div class="text-content">
+                <h1>LOREM IPSUM</h1>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                    took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="gradient-overlay"></div>
+        </div>
+
+    </div>
+    <!-- Ensure this is outside of .text-overlay -->
+    <!-- New section for images -->
+    <div class="spacer-section"></div>
+
+    <div class="image-section">
+        <h2 class="order-now-heading">Order Now</h2>
+
+        <div class="image-row">
+        <div class="image-container">
+            <img src="images/img4.jpg" alt="Image 3">
+        
+
+            <div class="image-description">
+                <h2>Burger</h2>
+                <p>Lorem Ipsum has been the
+                    industry's standard dummy text</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/img2.jpg" alt="Image 1">
+            <div class="image-description">
+                <h2>Pizza</h2>
+                <p>Lorem Ipsum has been the
+                    industry's standard dummy text</p>
+            </div>
+
+        </div>
+        <div class="image-container">
+            <img src="images/img3.jpg" alt="Image 2">
+            <div class="image-description">
+                <h2>Pasta</h2>
+                <p>Lorem Ipsum has been the
+                    industry's standard dummy text</p>
+            </div>
+
+        </div>
+    </div>
+        <button class="order-button">Order</button>
+    </div>
+</body>
+
+</html>

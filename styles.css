@@ -1,0 +1,266 @@
+/* Base styles */
+body {
+    overflow-x: hidden; 
+    background-image: url('images/img1.jpg');
+
+   
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif; /* Ensure font is applied */
+}
+
+/* Text overlay section styling */
+.text-overlay {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start; /* Aligns text content to the left */
+    align-items: center; /* Center the text content vertically */
+}
+
+/* Content styling within the text overlay */
+.text-content {
+    width: 30%; /* Occupy 40% of the width */
+    text-align: left; /* Align text to the left */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px; /* Optional: adds padding around text */
+    background-color: rgba(246, 89, 89, 0.5); /* Optional: adds a semi-transparent background for better readability */
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 2rem; /* Adjust font size as needed */
+}
+
+.text-content p {
+    margin: 10px 0 0;
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Semi-transparent background for better readability */
+    padding: 10px 20px;
+    z-index: 1000;
+    color: #000; /* Text color for better contrast */
+}
+
+.navbar-logo a {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    flex: 2; /* Adjust width for menu */
+    justify-content: center;
+}
+
+.navbar-menu li {
+    margin: 0; /* Reset margin on list items */
+}
+
+.navbar-menu li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-left: auto; /* Pushes icons to the right end */
+}
+
+.navbar-icons a {
+    color: #000;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 24px;
+}
+
+/* CSS-only Toggle */
+.menu-toggle {
+    display: none;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu.active {
+    display: none;
+}
+
+.menu-toggle:checked + .navbar-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: static; /* Make it static on smaller screens to avoid overlap */
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu-toggle:checked + .navbar-menu {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Gradient overlay styling */
+.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 70px; /* Adjust the height of the gradient strip */
+    background: linear-gradient(to right, #f366ac, #f0a26e, #f8e082);
+}
+
+/* Spacer section for white space */
+.spacer-section {
+    height: 20vh; /* Height of the white space section */
+    background-color: #ffffff; /* White background */
+}
+
+/* Section styling for image section */
+.image-section {
+    width: 100%; /* Ensure full width */
+    margin: 0 auto; /* Center the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers images horizontally */
+    align-items: center; /* Centers images vertically */
+    background: linear-gradient(to right, #f366ac, #f0a26e, #f8e082);
+    padding-bottom: 30px; /* Space around images */
+    box-sizing: border-box; /* Includes padding in width */
+    height:auto; /* Adjust height as needed */
+  
+     overflow: hidden;
+}
+.image-row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between images */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Prevent content overflow */
+}
+/* Styling for individual image containers */
+.image-container {
+    position: relative;
+    
+    overflow: hidden; /* Prevent content overflow */
+    overflow: hidden;
+    border-radius:0px 30px 0px 50px; /* Rounded corners for the container */
+    margin: 0 10px; /* Space between images */
+    background-color: #fff; /* White background for the container */
+    padding:  10px; /* Space between image and container border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    width: 250px; /* Width of the container */
+    height: 300px; /* Height to accommodate the image and text */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%; /* Fill container */
+    height: 70%; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 0px 30px 0px 0px; /* Rounded corners */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Text description styling */
+.image-description {
+    margin-top: 10px; /* Space between the image and text */
+    text-align: center; /* Center text alignment */
+    color: #333; /* Text color */
+    padding: 0 10px; /* Padding for text */
+}
+
+.image-description h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Heading size */
+}
+
+.image-description p {
+    margin: 5px 0 0;
+    font-size: 1rem; /* Paragraph size */
+}
+/* Order Now heading styling */
+.order-now-heading {
+    text-align: center; /* Center text horizontally */
+    color: #fff; /* Text color */
+    font-size: 2rem; /* Adjust font size */
+    font-weight:bold; /* Make it bold */
+    margin-top: 0; /* Remove all margins for precise placement */
+    margin-bottom: 50px;
+    padding: 0; /* Space between heading and images */
+}
+
+/* Order button styling */
+.order-button {
+    margin-top: 20px; /* Space between images and button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #f8d5d5; /* White background */
+    color: #333; /* Text color */
+    border: none;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+
